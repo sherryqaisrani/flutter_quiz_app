@@ -1,0 +1,150 @@
+{
+    "id": "paper046",
+    "title": "English",
+    "imageUrl": "",
+    "description": "Basic English MCQS Multiple Choices Questions for basic English MCQS Prepare",
+    "timesecond": "900",
+    "questions" : [
+        {
+            "id": "paper046question1",
+            "question": "If she was free, she ________ to you.",
+            "answers":[
+                {
+                    "identifier":"A",
+                    "Answer":"talked"
+                    
+                },
+                {
+                    "identifier":"B",
+                    "Answer":"can talk"
+                    
+                },
+                {
+                    "identifier":"C",
+                    "Answer":"could talked"
+                    
+                },
+                {
+                    "identifier":"D",
+                    "Answer":"would talk"
+                    
+                }
+                
+            ],
+            "correct_answer" : "A"
+        },
+        {
+            "id": "paper046question2",
+            "question": "Her thinking leans ____ democracy.",
+            "answers":[
+                {
+                    "identifier":"A",
+                    "Answer":"with"
+                    
+                },
+                {
+                    "identifier":"B",
+                    "Answer":"towards"
+                    
+                },
+                {
+                    "identifier":"C",
+                    "Answer":"for"
+                    
+                },
+                {
+                    "identifier":"D",
+                    "Answer":"None of the above"
+                    
+                }
+                
+            ],
+            "correct_answer" : "B"
+        },
+        {
+            "id": "paper046question3",
+            "question": "He got too tired _____ over work.",
+            "answers":[
+                {
+                    "identifier":"A",
+                    "Answer":"because of"
+                    
+                },
+                {
+                    "identifier":"B",
+                    "Answer":"because off"
+                    
+                },
+                {
+                    "identifier":"C",
+                    "Answer":"on"
+                    
+                },
+                {
+                    "identifier":"D",
+                    "Answer":"for"
+                    
+                }
+                
+            ],
+            "correct_answer" : "A"
+        },
+        {
+            "id": "paper046question4",
+            "question": "_____ his principles, he has to be very careful.",
+            "answers":[
+                {
+                    "identifier":"A",
+                    "Answer":"with regard of"
+                    
+                },
+                {
+                    "identifier":"B",
+                    "Answer":"with regard on"
+                    
+                },
+                {
+                    "identifier":"C",
+                    "Answer":"with regard to"
+                    
+                },
+                {
+                    "identifier":"D",
+                    "Answer":"None of these"
+                    
+                }
+                
+            ],
+            "correct_answer" : "C"
+        },
+        {
+            "id": "paper046question5",
+            "question": "Building has been built _____ the new plan.",
+            "answers":[
+                {
+                    "identifier":"A",
+                    "Answer":"accordance to"
+                    
+                },
+                {
+                    "identifier":"B",
+                    "Answer":"in accordance with"
+                    
+                },
+                {
+                    "identifier":"C",
+                    "Answer":"for"
+                    
+                },
+                {
+                    "identifier":"D",
+                    "Answer":"about"
+                    
+                }
+                
+            ],
+            "correct_answer" : "B"
+        }
+    ]
+
+}

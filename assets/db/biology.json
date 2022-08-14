@@ -1,0 +1,150 @@
+{
+    "id": "paper044",
+    "title": "Biology",
+    "imageUrl": "",
+    "description": "Basic Biology MCQS Multiple Choices Questions for basic Biology MCQS Prepare",
+    "timesecond": "900",
+    "questions" : [
+        {
+            "id": "paper044question1",
+            "question": "Which of the following are the basic categories of chemical signaling found in multicellular organisms?",
+            "answers":[
+                {
+                    "identifier":"A",
+                    "Answer":"Paracrine signaling"
+                    
+                },
+                {
+                    "identifier":"B",
+                    "Answer":"Autocrine signaling"
+                    
+                },
+                {
+                    "identifier":"C",
+                    "Answer":"Endocrine signaling"
+                    
+                },
+                {
+                    "identifier":"D",
+                    "Answer":"All of the above"
+                    
+                }
+                
+            ],
+            "correct_answer" : "D"
+        },
+        {
+            "id": "paper044question2",
+            "question": "Cell signaling is?",
+            "answers":[
+                {
+                    "identifier":"A",
+                    "Answer":"Intercellular"
+                    
+                },
+                {
+                    "identifier":"B",
+                    "Answer":"Intracellular"
+                    
+                },
+                {
+                    "identifier":"C",
+                    "Answer":"Both (a) and (b)"
+                    
+                },
+                {
+                    "identifier":"D",
+                    "Answer":"None of the above"
+                    
+                }
+                
+            ],
+            "correct_answer" : "D"
+        },
+        {
+            "id": "paper044question3",
+            "question": "Which of the following signaling is involved in Paracrine signaling?",
+            "answers":[
+                {
+                    "identifier":"A",
+                    "Answer":"Chemical signaling"
+                    
+                },
+                {
+                    "identifier":"B",
+                    "Answer":"Synaptic transmission"
+                    
+                },
+                {
+                    "identifier":"C",
+                    "Answer":"Hormonal Communication"
+                    
+                },
+                {
+                    "identifier":"D",
+                    "Answer":"Autostimulation of cell"
+                    
+                }
+                
+            ],
+            "correct_answer" : "A"
+        },
+        {
+            "id": "paper044question4",
+            "question": "Which of the following statements is true about cell signaling?",
+            "answers":[
+                {
+                    "identifier":"A",
+                    "Answer":"In plants, the cell signaling occurs through phytohormones"
+                    
+                },
+                {
+                    "identifier":"B",
+                    "Answer":"All of the above"
+                    
+                },
+                {
+                    "identifier":"C",
+                    "Answer":"Cell signaling is used to study the signaling between cells of an organism"
+                    
+                },
+                {
+                    "identifier":"D",
+                    "Answer":"Cell signaling is used to study the context of human diseases"
+                    
+                }
+                
+            ],
+            "correct_answer" : "D"
+        },
+        {
+            "id": "paper044question5",
+            "question": "Which of the following signal molecules is not used for extracellular signaling?",
+            "answers":[
+                {
+                    "identifier":"A",
+                    "Answer":"Autocrine"
+                    
+                },
+                {
+                    "identifier":"B",
+                    "Answer":"Endocrine"
+                    
+                },
+                {
+                    "identifier":"C",
+                    "Answer":"Cyclic AMP"
+                    
+                },
+                {
+                    "identifier":"D",
+                    "Answer":"None of the above"
+                    
+                }
+                
+            ],
+            "correct_answer" : "C"
+        }
+    ]
+
+}
