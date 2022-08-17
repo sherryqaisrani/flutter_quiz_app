@@ -26,11 +26,11 @@ class QuestionPaper {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
-    data['imageUrl'] = this.imageUrl;
-    data['description'] = this.description;
-    data['timesecond'] = this.timesecond;
+    data['id'] = id;
+    data['title'] = title;
+    data['imageUrl'] = imageUrl;
+    data['description'] = description;
+    data['timesecond'] = timesecond;
     if (this.questions != null) {
       data['questions'] = this.questions!.map((v) => v.toJson()).toList();
     }
@@ -54,17 +54,17 @@ class Questions {
       : id = json['id'],
         question = json['question'],
         answers =
-            (json['answer'] as List).map((e) => Answers.fromJson(e)).toList(),
+            (json['answers'] as List).map((e) => Answers.fromJson(e)).toList(),
         correctAnswer = json['correct_answer'];
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['question'] = this.question;
+    data['id'] = id;
+    data['question'] = question;
     if (this.answers != null) {
       data['answers'] = this.answers.map((v) => v.toJson()).toList();
     }
-    data['correct_answer'] = this.correctAnswer;
+    data['correct_answer'] = correctAnswer;
     return data;
   }
 }
@@ -80,9 +80,9 @@ class Answers {
         answer = json['Answer'];
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['identifier'] = this.identifier;
-    data['Answer'] = this.answer;
+    final Map<String, dynamic> data = Map<String, dynamic>();
+    data['identifier'] = identifier;
+    data['Answer'] = answer;
     return data;
   }
 }

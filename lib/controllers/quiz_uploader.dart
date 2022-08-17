@@ -1,8 +1,11 @@
 import 'dart:convert';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:quiz_app/firebase_services/firebase_reference.dart';
 import 'package:quiz_app/models/questionPaper.dart';
 
 class QuizUploader extends GetxController {
@@ -14,6 +17,7 @@ class QuizUploader extends GetxController {
   }
 
   void uploadData() async {
+    final firebaseFirestore = FirebaseFirestore.instance;
     final menifestJson = await DefaultAssetBundle.of(Get.context!)
         .loadString("AssetManifest.json");
 
@@ -31,9 +35,19 @@ class QuizUploader extends GetxController {
     for (var paper in paperInAsset) {
       final String paperData = await rootBundle.loadString(paper);
       list.add(QuestionPaper.fromJson(json.decode(paperData)));
-      print(paperData);
     }
 
-    print(list[0]);
+    var batch = firebaseFirestore.batch();
+
+    for (var paper in list) {
+      batch.set(questionPaperRef.doc(paper.id), {
+        "title": paper.title,
+        "imageUrl": paper.imageUrl,
+        "description": paper.description,
+        "timesecond": paper.timesecond,
+        "questionsCount": paper.questions == null ? 0 : paper.questions!.length,
+      });
+    }
+    await batch.commit();
   }
 }
