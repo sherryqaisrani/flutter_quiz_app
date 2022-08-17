@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/firebase_services/firebase_reference.dart';
 import 'package:quiz_app/models/questionPaper.dart';
+import 'package:quiz_app/utils/status_enum.dart';
 
 class QuizUploader extends GetxController {
   @override
@@ -16,7 +17,11 @@ class QuizUploader extends GetxController {
     super.onReady();
   }
 
+  final dataLoading = DataStatus.loading.obs;
+
   void uploadData() async {
+    dataLoading.value = DataStatus.loading;
+
     final firebaseFirestore = FirebaseFirestore.instance;
     final menifestJson = await DefaultAssetBundle.of(Get.context!)
         .loadString("AssetManifest.json");
@@ -64,6 +69,8 @@ class QuizUploader extends GetxController {
         }
       }
     }
+
+    dataLoading.value = DataStatus.completed;
     await batch.commit();
   }
 }
