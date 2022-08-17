@@ -47,6 +47,22 @@ class QuizUploader extends GetxController {
         "timesecond": paper.timesecond,
         "questionsCount": paper.questions == null ? 0 : paper.questions!.length,
       });
+
+      for (var question in paper.questions!) {
+        final questionDoc =
+            questionRef(paperId: paper.id, questionId: question.id);
+        batch.set(questionDoc, {
+          "question": question.question,
+          "correct_answer": question.correctAnswer,
+        });
+
+        for (var answer in question.answers) {
+          batch.set(questionDoc.collection("Answers").doc(answer.identifier), {
+            "identifier": answer.identifier,
+            "Answer": answer.answer,
+          });
+        }
+      }
     }
     await batch.commit();
   }
