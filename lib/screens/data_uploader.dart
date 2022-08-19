@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:quiz_app/controllers/quiz_uploader.dart';
 import 'package:quiz_app/utils/status_enum.dart';
 
-class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
+class DataUploader extends StatelessWidget {
+  DataUploader({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
