@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:quiz_app/controllers/theme_controller.dart';
 import 'package:quiz_app/firebase_services/initial_binding.dart';
 import 'package:quiz_app/screens/app_intoduction.dart';
 import 'package:quiz_app/screens/data_uploader.dart';
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
           getPages: appRoutes.routes,
           title: 'Study App',
           // You can use the library anywhere in the app even in theme
-          theme: AppDarkTheme().buildDarkTheme(),
+          theme: Get.find<ThemeController>().darkThemeData,
           home: child,
         );
       },
