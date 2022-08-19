@@ -2,14 +2,17 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:quiz_app/firebase_services/initial_binding.dart';
 import 'package:quiz_app/screens/app_intoduction.dart';
 import 'package:quiz_app/screens/data_uploader.dart';
 import 'package:quiz_app/screens/splash_screen.dart';
+import 'package:quiz_app/utils/routes.dart';
 
 import 'firebase_options.dart';
 
 Future<void> main() async {
-  // WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
+  InitialBinding().dependencies();
   // await Firebase.initializeApp(
   //   options: DefaultFirebaseOptions.currentPlatform,
   // );
@@ -29,6 +32,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
+          getPages: appRoutes.routes,
           title: 'Study App',
           // You can use the library anywhere in the app even in theme
           theme: ThemeData(
@@ -38,7 +42,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: AppIntroScreen(),
+      child: SplashScreen(),
     );
   }
 }
