@@ -11,6 +11,7 @@ class AppLightTheme with SubThemeData {
     final systemLightTheme = ThemeData.light();
 
     return systemLightTheme.copyWith(
+      primaryColor: primaryLightColor,
       textTheme: getTextTheme().apply(
         bodyColor: mainLightTextColor,
         displayColor: mainLightTextColor,
