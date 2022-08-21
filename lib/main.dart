@@ -10,15 +10,14 @@ import 'package:quiz_app/screens/splash_screen.dart';
 import 'package:quiz_app/themes_config/app_dark_theme.dart';
 import 'package:quiz_app/themes_config/app_light_theme.dart';
 import 'package:quiz_app/utils/routes.dart';
-
 import 'firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   InitialBinding().dependencies();
-  // await Firebase.initializeApp(
-  //   options: DefaultFirebaseOptions.currentPlatform,
-  // );
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -38,7 +37,7 @@ class MyApp extends StatelessWidget {
           getPages: appRoutes.routes,
           title: 'Study App',
           // You can use the library anywhere in the app even in theme
-          theme: Get.find<ThemeController>().darkThemeData,
+          theme: Get.find<ThemeController>().lightThemeData,
           home: child,
         );
       },

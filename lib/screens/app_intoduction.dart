@@ -40,10 +40,12 @@ class AppIntroScreen extends StatelessWidget {
                 height: 40.h,
               ),
               AppCircleButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.arrow_forward,
                   ),
-                  onTap: () {}),
+                  onTap: () {
+                    Get.offAllNamed('/home');
+                  }),
             ],
           ),
         ),
