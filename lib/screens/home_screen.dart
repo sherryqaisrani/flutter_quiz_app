@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -16,20 +17,18 @@ class HomeScreen extends StatelessWidget {
               child: SizedBox(
                 height: 200.h,
                 width: 200.w,
-                child: FadeInImage(
-                  placeholder: const AssetImage(
-                    'assets/images/physics.png',
+                child: CachedNetworkImage(
+                  placeholder: (context, url) => Container(
+                    child: const Center(child: CircularProgressIndicator()),
                   ),
-                  image: NetworkImage(
-                    controller.allImagePath[index],
-                  ),
+                  imageUrl: controller.allPaper[index].imageUrl!,
                 ),
               ),
             )),
         separatorBuilder: ((context, index) => SizedBox(
               height: 20.h,
             )),
-        itemCount: controller.allImagePath.length,
+        itemCount: controller.allPaper.length,
       ),
     ));
   }
