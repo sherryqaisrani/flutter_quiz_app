@@ -19,5 +19,5 @@ const gridentDarkTheme = LinearGradient(
   colors: [primaryDarkColorDark, primaryColorDark],
 );
 
-LinearGradient mainAppGrident(BuildContext context) =>
-    UIParameters().isDark(context) ? gridentDarkTheme : gredientLightTheme;
+LinearGradient mainAppGrident() =>
+    UIParameters.isDark() ? gridentDarkTheme : gredientLightTheme;

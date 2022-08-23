@@ -12,7 +12,7 @@ class AppIntroScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(gradient: mainAppGrident(context)),
+        decoration: BoxDecoration(gradient: mainAppGrident()),
         alignment: Alignment.center,
         child: Padding(
           padding: EdgeInsets.symmetric(

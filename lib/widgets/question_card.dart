@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/models/questionPaper.dart';
+import 'package:quiz_app/themes_config/UI_parameters.dart';
+import 'package:quiz_app/widgets/custome_text_style.dart';
 
 class QuestionCard extends StatelessWidget {
   QuestionCard({Key? key, required this.model}) : super(key: key);
@@ -47,11 +49,7 @@ class QuestionCard extends StatelessWidget {
                   children: [
                     Text(
                       model.title,
-                      style: TextStyle(
-                        color: Theme.of(context).primaryColor,
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.w400,
-                      ),
+                      style: customeTextStyle(context),
                     ),
                     Padding(
                       padding: EdgeInsets.only(
